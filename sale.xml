@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- sale.sale -->
+        <record model="ir.ui.view" id="sale_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_form</field>
+        </record>
+
+        <!-- sale.change_line_quantity -->
+        <record model="ir.ui.view" id="recompute_price_start_view_form">
+            <field name="model">sale.recompute_price.start</field>
+            <field name="type">form</field>
+            <field name="name">recompute_price_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_recompute_price">
+            <field name="name">Recompute Price</field>
+            <field name="wiz_name">sale.recompute_price</field>
+            <field name="model">sale.sale</field>
+        </record>
+    </data>
+</tryton>

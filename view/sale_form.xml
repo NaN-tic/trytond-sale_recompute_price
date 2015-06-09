@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath
+        expr="/form/notebook/page[@id='sale']/group[@id='amount_buttons']/group[@id='buttons']"
+        position="replace_attributes">
+        <group id="buttons" col="12"/>
+    </xpath>
+    <xpath
+        expr="/form/notebook/page[@id='sale']/group[@id='amount_buttons']/group[@id='buttons']"
+        position="inside">
+        <button name="recompute_price" string="Recompute Price"/>
+    </xpath>
+</data>

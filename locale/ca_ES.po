@@ -1,0 +1,71 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.recompute_price.start,amount:"
+msgid "Amount"
+msgstr "Import"
+
+msgctxt "field:sale.recompute_price.start,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:sale.recompute_price.start,currency_digits:"
+msgid "Currency Digits"
+msgstr "Dígits de la moneda"
+
+msgctxt "field:sale.recompute_price.start,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:sale.recompute_price.start,method:"
+msgid "Recompute Method"
+msgstr "Mètode de recálcul"
+
+msgctxt "field:sale.recompute_price.start,percentage:"
+msgid "Percentage"
+msgstr "Percentatge"
+
+msgctxt "model:ir.action,name:wizard_recompute_price"
+msgid "Recompute Price"
+msgstr "Recalcular preus"
+
+msgctxt "model:sale.recompute_price.start,name:"
+msgid "Recompute Price - Start"
+msgstr "Recalcular preus"
+
+msgctxt "selection:sale.recompute_price.start,method:"
+msgid "By Percentage"
+msgstr "Per percentatge"
+
+msgctxt "selection:sale.recompute_price.start,method:"
+msgid "Fixed Amount"
+msgstr "Import fix"
+
+msgctxt "view:sale.recompute_price.start:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:sale.recompute_price.start:"
+msgid "Recompute Price"
+msgstr "Recalcular preus"
+
+msgctxt "view:sale.recompute_price.start:"
+msgid "Recompute the price for the selected sale?"
+msgstr "Recalcular els preus de la venda seleccionada?"
+
+msgctxt "view:sale.sale:"
+msgid "Recompute Price"
+msgstr "Recalcular preus"
+
+msgctxt "wizard_button:sale.recompute_price,start,compute:"
+msgid "Compute"
+msgstr "Calculla"
+
+msgctxt "wizard_button:sale.recompute_price,start,compute:"
+msgid "Recompute"
+msgstr "Recalcula"
+
+msgctxt "wizard_button:sale.recompute_price,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"

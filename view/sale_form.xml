@@ -3,13 +3,8 @@
 copyright notices and license terms. -->
 <data>
     <xpath
-        expr="/form/notebook/page[@id='sale']/group[@id='amount_buttons']/group[@id='buttons']"
-        position="replace_attributes">
-        <group id="buttons" col="12"/>
-    </xpath>
-    <xpath
-        expr="/form/notebook/page[@id='sale']/group[@id='amount_buttons']/group[@id='buttons']"
-        position="inside">
+        expr="/form/notebook/page[@id='sale']/group/group[@id='buttons']/button[@name='cancel']"
+        position="before">
         <button name="recompute_price" string="Recompute Price"/>
     </xpath>
 </data>

@@ -9,11 +9,11 @@ from trytond.transaction import Transaction
 from trytond.wizard import Button, StateTransition, StateView, Wizard
 
 __all__ = ['Sale', 'RecomputePriceStart', 'RecomputePrice']
-__metaclass__ = PoolMeta
 
 
 class Sale:
     __name__ = 'sale.sale'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def __setup__(cls):

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- The COPYRIGHT file at the top level of this repository contains the full
      copyright notices and license terms. -->
-<form string="Recompute Price" col="4">
+<form col="4">
     <image name="tryton-dialog-information" xexpand="0" xfill="0"/>
     <label string="Recompute the price for the selected sale?"
         id="advice" yalign="0.0" xalign="0.0" xexpand="1" colspan="3"/>

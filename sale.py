@@ -35,8 +35,8 @@ class Sale:
         new_unit_price = (line.unit_price * factor).quantize(
             Decimal(str(10 ** -digits)))
         values = {
-            'unit_price':  new_unit_price
-           }
+            'unit_price': new_unit_price,
+            }
         # Compatibility with sale_discount module
         if hasattr(line, 'gross_unit_price'):
             digits = line.__class__.gross_unit_price.digits[1]

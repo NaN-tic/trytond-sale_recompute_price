@@ -25,8 +25,8 @@
 
         <record model="ir.model.button" id="recompute_price_button_id_button">
             <field name="name">recompute_price</field>
-            <field name="model" search="[('model', '=', 'sale')]"/>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
         </record>
-        
+
     </data>
 </tryton>

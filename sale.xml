@@ -22,5 +22,11 @@
             <field name="wiz_name">sale.recompute_price</field>
             <field name="model">sale.sale</field>
         </record>
+
+        <record model="ir.model.button" id="recompute_price_button_id_button">
+            <field name="name">recompute_price</field>
+            <field name="model" search="[('model', '=', 'sale')]"/>
+        </record>
+        
     </data>
 </tryton>

@@ -11,9 +11,8 @@ from trytond.wizard import Button, StateTransition, StateView, Wizard
 __all__ = ['Sale', 'RecomputePriceStart', 'RecomputePrice']
 
 
-class Sale:
+class Sale(metaclass=PoolMeta):
     __name__ = 'sale.sale'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def __setup__(cls):

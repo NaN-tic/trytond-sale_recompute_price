@@ -5,6 +5,6 @@ copyright notices and license terms. -->
     <xpath
         expr="/form/notebook/page[@id='sale']/group/group[@id='buttons']/button[@name='cancel']"
         position="before">
-        <button name="recompute_price" string="Recompute Price"/>
+        <button name="recompute_price"/>
     </xpath>
 </data>

@@ -3,7 +3,7 @@
 copyright notices and license terms. -->
 <data>
     <xpath
-        expr="/form/notebook/page[@id='sale']/group/group[@id='buttons']/button[@name='cancel']"
+        expr="/form/group[@id='buttons']/button[@name='cancel']"
         position="before">
         <button name="recompute_price"/>
     </xpath>

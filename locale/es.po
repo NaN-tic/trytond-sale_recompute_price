@@ -68,4 +68,4 @@ msgstr "Recalcular"
 
 msgctxt "wizard_button:sale.recompute_price,start,end:"
 msgid "Cancel"
-msgstr "Cancel·lar"
+msgstr "Cancelar"

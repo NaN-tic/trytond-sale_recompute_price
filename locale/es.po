@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -9,10 +9,6 @@ msgstr "Importe"
 msgctxt "field:sale.recompute_price.start,currency:"
 msgid "Currency"
 msgstr "Moneda"
-
-msgctxt "field:sale.recompute_price.start,currency_digits:"
-msgid "Currency Digits"
-msgstr "Decimals de la moneda"
 
 msgctxt "field:sale.recompute_price.start,id:"
 msgid "ID"

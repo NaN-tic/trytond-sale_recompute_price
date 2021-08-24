@@ -7,6 +7,7 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateTransition, StateView, Wizard
+from trytond.modules.currency.fields import Monetary
 
 __all__ = ['Sale', 'RecomputePriceStart', 'RecomputePrice']
 
@@ -99,20 +100,18 @@ class RecomputePriceStart(ModelView):
             'required': Eval('method') == 'percentage',
             },
         depends=['method'])
-    amount = fields.Numeric('Amount', digits=(16, Eval('currency_digits', 2)),
+    amount = Monetary('Amount', digits='currency', currency='currency',
         states={
             'invisible': Eval('method') != 'fixed_amount',
             'required': Eval('method') == 'fixed_amount',
             },
-        depends=['method', 'currency_digits'])
+        depends=['method'])
     currency = fields.Many2One('currency.currency', 'Currency', required=True,
         states={
             'invisible': Eval('method') != 'fixed_amount',
             'required': Eval('method') == 'fixed_amount',
             },
         depends=['method'])
-    currency_digits = fields.Function(fields.Integer('Currency Digits'),
-        'on_change_with_currency_digits')
 
     @staticmethod
     def default_currency():
@@ -120,12 +119,6 @@ class RecomputePriceStart(ModelView):
         company = Transaction().context.get('company')
         if company:
             return Company(company).currency.id
-
-    @fields.depends('currency')
-    def on_change_with_currency_digits(self, name=None):
-        if self.currency:
-            return self.currency.digits
-        return 2
 
     @staticmethod
     def default_method():
@@ -150,7 +143,6 @@ class RecomputePrice(Wizard):
         if len(Transaction().context['active_ids']) == 1:
             sale = Sale(Transaction().context['active_id'])
             default['currency'] = sale.currency.id
-            default['currency_digits'] = sale.currency.digits
             default['amount'] = (sale.untaxed_amount)
         return default
 

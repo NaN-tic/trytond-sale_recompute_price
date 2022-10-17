@@ -1,12 +1,12 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from decimal import Decimal
-
 from trytond.model import ModelView, fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateTransition, StateView, Wizard
+from trytond.modules.product import round_price
 
 __all__ = ['Sale', 'RecomputePriceStart', 'RecomputePrice']
 
@@ -30,17 +30,14 @@ class Sale(metaclass=PoolMeta):
         pass
 
     def _recompute_price_by_factor(self, line, factor):
-        digits = line.__class__.unit_price.digits[1]
-        new_unit_price = (line.unit_price * factor).quantize(
-            Decimal(str(10 ** -digits)))
+        new_unit_price = round_price(Decimal(line.unit_price * factor))
         values = {
             'unit_price': new_unit_price,
             }
         # Compatibility with sale_discount module
         if hasattr(line, 'gross_unit_price'):
             digits = line.__class__.gross_unit_price.digits[1]
-            new_gross_unit_price = (line.gross_unit_price * factor).quantize(
-                Decimal(str(10 ** -digits)))
+            new_gross_unit_price = round_price(Decimal((line.gross_unit_price * factor)))
             values['gross_unit_price'] = new_gross_unit_price
         return values
 

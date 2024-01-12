@@ -94,20 +94,17 @@ class RecomputePriceStart(ModelView):
         states={
             'invisible': Eval('method') != 'percentage',
             'required': Eval('method') == 'percentage',
-            },
-        depends=['method'])
+            })
     amount = Monetary('Amount', digits='currency', currency='currency',
         states={
             'invisible': Eval('method') != 'fixed_amount',
             'required': Eval('method') == 'fixed_amount',
-            },
-        depends=['method'])
+            })
     currency = fields.Many2One('currency.currency', 'Currency', required=True,
         states={
             'invisible': Eval('method') != 'fixed_amount',
             'required': Eval('method') == 'fixed_amount',
-            },
-        depends=['method'])
+            })
 
     @staticmethod
     def default_currency():

@@ -35,10 +35,6 @@ class Sale(metaclass=PoolMeta):
         values = {
             'unit_price': new_unit_price,
             }
-        # Compatibility with sale_discount module
-        if hasattr(line, 'gross_unit_price'):
-            new_gross_unit_price = round_price(Decimal((line.gross_unit_price * factor)))
-            values['gross_unit_price'] = new_gross_unit_price
         return values
 
     @classmethod
